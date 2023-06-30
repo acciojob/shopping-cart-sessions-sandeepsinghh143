@@ -22,16 +22,27 @@ function renderProducts() {
 }
 
 // Render cart list
-function renderCart() {}
+const cartList = document.getElementById("cart-list");
+function renderCart() {
+	
+}
 
 // Add item to cart
-function addToCart(productId) {}
+function addToCart(productId) {
+	
+}
 
 // Remove item from cart
-function removeFromCart(productId) {}
+function removeFromCart(productId) {
+	sessionStorage.removeItem(productId);
+}
 
 // Clear cart
-function clearCart() {}
+let clearBtn=document.getElementById("clear-cart-btn");
+clearBtn.addEventListener("click",clearCart);
+function clearCart() {
+	sessionStorage.clear();
+}
 
 // Initial render
 renderProducts();
